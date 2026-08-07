@@ -72,12 +72,20 @@ ul {
   color: rgb(65, 63, 63);
 }
 .informacoes {
+}
+.bg-biscoitos {
+  background-color: #f5d3c5;
   max-width: 80%;
 }
+
 .container-biscoitos {
   min-height: 100vh;
   border-bottom: 2px solid #88001e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .produtos {
   font-size: 2.5rem;
   font-weight: 600;
@@ -85,28 +93,57 @@ ul {
   color: #88001e;
   text-decoration: underline;
 }
+
 .container-img-biscoitos {
-  max-width: 60%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem 1rem;
-  padding: 0 0 3rem;
-}
-.biscoitos {
-  margin-top: 2rem;
-  border-radius: 6px;
-  max-width: 60%;
-  border: 3px solid #88001e;
-}
-.nome-biscoitos {
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: rgb(65, 63, 63);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 0 !important;
+  padding: 1.5rem 0 2rem 0;
+  margin: 0;
+  list-style: none;
+  -webkit-overflow-scrolling: touch;
+  background-color: #f9ead6;
+
+  width: 95vw;
+  max-width: 950px;
+  border-radius: 16px;
 }
+
+.container-img-biscoitos li {
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 1rem;
+}
+
+/* IMAGEM COM O TAMANHO MÁXIMO AMPLIADO */
+.biscoitos {
+  width: 100%;
+  height: auto;
+  max-height: 650px; /* AUMENTADO: Altura máxima liberada para a imagem ganhar mais corpo */
+  object-fit: contain;
+  border: 4px solid #88001e;
+  border-radius: 12px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.nome-biscoitos {
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  font-weight: 600;
+  color: #88001e;
+}
+
 .container-quem-somos {
+  max-width: 80%;
   min-height: 100vh;
   border-bottom: 2px solid #88001e;
   padding: 1rem 0 2rem;
